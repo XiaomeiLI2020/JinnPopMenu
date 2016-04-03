@@ -1,7 +1,7 @@
 # JinnLock
 A PopView for iOS by jinnchang.
 # Preview
-![image](https://github.com/jinnchang/JinnPopView/blob/master/JinnPopViewExample/Preview/preview.gif)
+![image](https://github.com/jinnchang/JinnPopViewExample/blob/master/Preview/preview.gif)
 # Usage
 ```objective-c
 #import "JinnPopView.h"
