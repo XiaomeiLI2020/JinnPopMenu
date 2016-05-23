@@ -39,5 +39,5 @@ JinnPopMenu *popMenu = [[JinnPopMenu alloc] initWithPopMenuItems:popMenuItems];
 ```objc
 - (void)itemSelectedAtIndex:(NSInteger)index popMenu:(JinnPopMenu *)popMenu;
 ```
-# Blog
-http://blog.csdn.net/jinnchang
+# Github
+https://github.com/jinnchang
