@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FA78C22D1CD1A0A100F46ECE"
+               BlueprintIdentifier = "FAA7005E1D6BD66E00484D6A"
                BuildableName = "JinnPopMenuExample.app"
                BlueprintName = "JinnPopMenuExample"
                ReferencedContainer = "container:JinnPopMenuExample.xcodeproj">
@@ -32,7 +32,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FA78C22D1CD1A0A100F46ECE"
+            BlueprintIdentifier = "FAA7005E1D6BD66E00484D6A"
             BuildableName = "JinnPopMenuExample.app"
             BlueprintName = "JinnPopMenuExample"
             ReferencedContainer = "container:JinnPopMenuExample.xcodeproj">
@@ -55,7 +55,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FA78C22D1CD1A0A100F46ECE"
+            BlueprintIdentifier = "FAA7005E1D6BD66E00484D6A"
             BuildableName = "JinnPopMenuExample.app"
             BlueprintName = "JinnPopMenuExample"
             ReferencedContainer = "container:JinnPopMenuExample.xcodeproj">
@@ -74,7 +74,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FA78C22D1CD1A0A100F46ECE"
+            BlueprintIdentifier = "FAA7005E1D6BD66E00484D6A"
             BuildableName = "JinnPopMenuExample.app"
             BlueprintName = "JinnPopMenuExample"
             ReferencedContainer = "container:JinnPopMenuExample.xcodeproj">

@@ -3,7 +3,7 @@
  **  Giuhub: https://github.com/jinnchang
  **
  **  FileName: JinnPopMenu.m
- **  Description: 弹出菜单，依赖 Masonry 控件，支持各种界面的适配，包括旋转，支持各种样式自定义
+ **  Description: 弹出式菜单, 依赖 Masonry 控件, 支持各种界面的适配(包括旋转), 支持各种自定义样式
  **
  **  History
  **  -----------------------------------------------------------------------------------------------
@@ -11,18 +11,24 @@
  **  Date: 16/4/28
  **  Version: 1.0.0
  **  Remark: Create
+ **
+ **  Author: jinnchang
+ **  Date: 16/8/22
+ **  Version: 1.1.0
+ **  Remark: 调整更多可自定义样式
  **************************************************************************************************/
 
 #import "JinnPopMenu.h"
 #import "Masonry.h"
 
-#define TITLE_FONT_SIZE 12
-#define ANIMATION_DURATION 0.4f
+static const CGFloat kTitleFontSize = 12.f;
 
-#pragma mark -
+#pragma mark - JinnPopMenuItem
 
 /***************************************************************************************************
+ **
  ** JinnPopMenuItem
+ **
  **************************************************************************************************/
 
 @interface JinnPopMenuItem ()
@@ -38,32 +44,71 @@
 
 @implementation JinnPopMenuItem
 
-- (instancetype)initWithTitle:(NSString *)title titleColor:(UIColor *)titleColor
+#pragma mark Init
+
+- (instancetype)initWithTitle:(NSString *)title
+                   titleColor:(UIColor *)titleColor
 {
-    return [self initWithTitle:title titleColor:titleColor selectedTitle:nil selectedTitleColor:nil icon:nil selectedIcon:nil];
+    return [self initWithTitle:title
+                    titleColor:titleColor
+                 selectedTitle:nil
+            selectedTitleColor:nil
+                          icon:nil
+                  selectedIcon:nil];
 }
 
 - (instancetype)initWithIcon:(UIImage *)icon
 {
-    return [self initWithTitle:nil titleColor:nil selectedTitle:nil selectedTitleColor:nil icon:icon selectedIcon:nil];
+    return [self initWithTitle:nil
+                    titleColor:nil
+                 selectedTitle:nil
+            selectedTitleColor:nil
+                          icon:icon
+                  selectedIcon:nil];
 }
 
-- (instancetype)initWithTitle:(NSString *)title titleColor:(UIColor *)titleColor icon:(UIImage *)icon
+- (instancetype)initWithTitle:(NSString *)title
+                   titleColor:(UIColor *)titleColor
+                         icon:(UIImage *)icon
 {
-    return [self initWithTitle:title titleColor:titleColor selectedTitle:nil selectedTitleColor:nil icon:icon selectedIcon:nil];
+    return [self initWithTitle:title
+                    titleColor:titleColor
+                 selectedTitle:nil
+            selectedTitleColor:nil
+                          icon:icon
+                  selectedIcon:nil];
 }
 
-- (instancetype)initWithTitle:(NSString *)title titleColor:(UIColor *)titleColor selectedTitle:(NSString *)selectedTitle selectedTitleColor:(UIColor *)selectedTitleColor
+- (instancetype)initWithTitle:(NSString *)title
+                   titleColor:(UIColor *)titleColor
+                selectedTitle:(NSString *)selectedTitle
+           selectedTitleColor:(UIColor *)selectedTitleColor
 {
-    return [self initWithTitle:title titleColor:titleColor selectedTitle:selectedTitle selectedTitleColor:selectedTitleColor icon:nil selectedIcon:nil];
+    return [self initWithTitle:title
+                    titleColor:titleColor
+                 selectedTitle:selectedTitle
+            selectedTitleColor:selectedTitleColor
+                          icon:nil
+                  selectedIcon:nil];
 }
 
-- (instancetype)initWithIcon:(UIImage *)icon selectedIcon:(UIImage *)selectedIcon
+- (instancetype)initWithIcon:(UIImage *)icon
+                selectedIcon:(UIImage *)selectedIcon
 {
-    return [self initWithTitle:nil titleColor:nil selectedTitle:nil selectedTitleColor:nil icon:icon selectedIcon:selectedIcon];
+    return [self initWithTitle:nil
+                    titleColor:nil
+                 selectedTitle:nil
+            selectedTitleColor:nil
+                          icon:icon
+                  selectedIcon:selectedIcon];
 }
 
-- (instancetype)initWithTitle:(NSString *)title titleColor:(UIColor *)titleColor selectedTitle:(NSString *)selectedTitle selectedTitleColor:(UIColor *)selectedTitleColor icon:(UIImage *)icon selectedIcon:(UIImage *)selectedIcon
+- (instancetype)initWithTitle:(NSString *)title
+                   titleColor:(UIColor *)titleColor
+                selectedTitle:(NSString *)selectedTitle
+           selectedTitleColor:(UIColor *)selectedTitleColor
+                         icon:(UIImage *)icon
+                 selectedIcon:(UIImage *)selectedIcon
 {
     self = [super init];
     
@@ -75,60 +120,73 @@
         [self setSelectedTitleColor:selectedTitleColor];
         [self setIcon:icon];
         [self setSelectedIcon:selectedIcon];
-        [self initGui];
+        [self createViews];
     }
     
     return self;
 }
 
-- (void)initGui
+- (void)createViews
 {
-    if (self.title == nil)
+    if (self.title == nil) // 纯图标菜单
     {
-        self.iconView = [[UIImageView alloc] init];
-        self.iconView.image = self.icon;
-        [self addSubview:self.iconView];
-        [self.iconView mas_makeConstraints:^(MASConstraintMaker *make) {
+        UIImageView *iconView = [[UIImageView alloc] initWithImage:self.icon];
+        [iconView setClipsToBounds:YES];
+        [self addSubview:iconView];
+        [self setIconView:iconView];
+        [iconView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerY.centerX.equalTo(self);
             make.size.mas_equalTo(CGSizeMake(self.icon.size.width, self.icon.size.height));
         }];
     }
-    else if (self.icon == nil)
+    else if (self.icon == nil) // 纯本文菜单
     {
-        self.itemLabel = [[UILabel alloc] init];
-        self.itemLabel.font = [UIFont systemFontOfSize:TITLE_FONT_SIZE];
-        self.itemLabel.text = self.title;
-        self.itemLabel.textColor = self.titleColor;
-        self.itemLabel.textAlignment = NSTextAlignmentCenter;
-        self.itemLabel.clipsToBounds = YES;
-        [self addSubview:self.itemLabel];
-        [self.itemLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        UILabel *itemLabel = [[UILabel alloc] init];
+        itemLabel.font = [UIFont systemFontOfSize:kTitleFontSize];
+        itemLabel.text = self.title;
+        itemLabel.textColor = self.titleColor;
+        itemLabel.textAlignment = NSTextAlignmentCenter;
+        itemLabel.clipsToBounds = YES;
+        [self addSubview:itemLabel];
+        [self setItemLabel:itemLabel];
+        [itemLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.centerY.centerX.equalTo(self);
             make.size.mas_equalTo(self);
         }];
     }
-    else
+    else // 图标文本菜单
     {
-        self.iconView = [[UIImageView alloc] init];
-        self.iconView.image = self.icon;
-        self.itemLabel = [[UILabel alloc] init];
-        self.itemLabel.font = [UIFont systemFontOfSize:TITLE_FONT_SIZE];
-        self.itemLabel.text = self.title;
-        self.itemLabel.textColor = self.titleColor;
-        self.itemLabel.textAlignment = NSTextAlignmentCenter;
-        [self addSubview:self.iconView];
-        [self addSubview:self.itemLabel];
-        [self.iconView mas_makeConstraints:^(MASConstraintMaker *make) {
+        UIImageView *iconView = [[UIImageView alloc] initWithImage:self.icon];
+        [iconView setClipsToBounds:YES];
+        [self addSubview:iconView];
+        [self setIconView:iconView];
+        [iconView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.centerX.equalTo(self);
-            make.size.mas_equalTo(CGSizeMake(self.icon.size.width, self.icon.size.width));
+            make.size.mas_equalTo(CGSizeMake(self.icon.size.width, self.icon.size.height));
         }];
-        [self.itemLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        UILabel *itemLabel = [[UILabel alloc] init];
+        itemLabel.font = [UIFont systemFontOfSize:kTitleFontSize];
+        itemLabel.text = self.title;
+        itemLabel.textColor = self.titleColor;
+        itemLabel.textAlignment = NSTextAlignmentCenter;
+        itemLabel.clipsToBounds = YES;
+        [self addSubview:itemLabel];
+        [self setItemLabel:itemLabel];
+        [itemLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.bottom.left.right.equalTo(self);
-            make.height.mas_equalTo(20);
+            make.top.equalTo(iconView.mas_bottom);
         }];
     }
 }
 
+#pragma mark Public
+
+/**
+ *  设置菜单选中状态
+ *
+ *  @param selected
+ */
 - (void)setItemSelected:(BOOL)selected
 {
     if (selected)
@@ -147,113 +205,130 @@
 
 @end
 
-#pragma mark -
+#pragma mark - JinnPopMenu
 
 /***************************************************************************************************
+ **
  ** JinnPopMenu
+ **
  **************************************************************************************************/
 
 @interface JinnPopMenu ()
 
-@property (nonatomic, strong) NSArray *popMenus;
-@property (nonatomic, assign) NSInteger itemsCount;
-@property (nonatomic, assign) NSInteger itemsLinesCount;
-@property (nonatomic, assign) BOOL animated;
+@property (nonatomic, strong) UIView    *superView;
+@property (nonatomic, strong) NSArray   *popMenus; // 菜单集合
+@property (nonatomic, assign) NSInteger itemsCount; // 菜单总数
+@property (nonatomic, assign) NSInteger itemsLinesCount; // 菜单行数
 
 @end
 
 @implementation JinnPopMenu
 
-- (instancetype)initWithPopMenus:(NSArray *)popMenus
+#pragma mark Init
+
+- (instancetype)initWithDelegate:(id<JinnPopMenuDelegate>)delegate superView:(UIView *)superView popMenus:(NSArray *)popMenus
 {
     self = [super init];
     
     if (self)
     {
+        [self setDelegate:delegate];
+        [self setSuperView:superView];
         [self setPopMenus:popMenus];
-        [self defaultSetting];
+        [self setup];
     }
     
     return self;
 }
 
-- (void)defaultSetting
+- (void)setup
 {
-    self.mode = JinnPopMenuModeNormal;
-    self.backgroundStyle = JinnPopMenuBackgroundStyleSolidColor;
-    self.showAnimation = JinnPopMenuAnimationZoom;
-    self.dismissAnimation = JinnPopMenuAnimationFade;
-    self.itemSize = CGSizeMake(50, 60);
-    self.itemSpaceHorizontal = 30;
-    self.itemSpaceVertical = 30;
-    self.offset = 0;
-    self.margin = CGPointMake(0, 0);
-    self.maxItemNumEachLine = 3;
-    self.shouldHideWhenItemSelected = NO;
+    self.mode                           = JinnPopMenuModeNormal;
+    self.backgroundStyle                = JinnPopMenuStyleSolidColor;
+    self.bezelStyle                     = JinnPopMenuStyleSolidColor;
+    self.offset                         = 0;
+    self.margin                         = CGPointMake(0, 0);
+    self.maxItemNumEachLine             = 3;
+    self.itemSize                       = CGSizeMake(50, 70);
+    self.itemSpaceHorizontal            = 30;
+    self.itemSpaceVertical              = 30;
+    self.showAnimation                  = JinnPopMenuAnimationZoom;
+    self.showAnimationDuration          = 0.4f;
+    self.dismissAnimation               = JinnPopMenuAnimationNone;
+    self.dismissAnimationDuration       = 0.4f;
+    self.shouldHideWhenItemSelected     = YES;
     self.shouldHideWhenBackgroundTapped = NO;
+    _selectedIndex                      = -1;
+    
     self.backgroundView = [[UIView alloc] init];
     self.bezelView = [[UIView alloc] init];
+    
+    [self.superView addSubview:self];
+    [self mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.superView);
+    }];
 }
 
 #pragma mark Public
 
-- (void)showAnimated:(BOOL)animated
+- (void)show
 {
-    [self setAnimated:animated];
-    [self initData];
+    self.itemsCount = self.popMenus.count;
+    self.itemsLinesCount = self.itemsCount % self.maxItemNumEachLine == 0 ? (self.itemsCount / self.maxItemNumEachLine) : (self.itemsCount / self.maxItemNumEachLine + 1);
+    
     [self createBackgroundView];
     [self createBezelView];
     [self createItems];
     
-    if (animated)
+    switch (self.showAnimation)
     {
-        switch (self.showAnimation)
+        case JinnPopMenuAnimationNone:
         {
-            case JinnPopMenuAnimationFade:
-            {
-                [self showAnimatedFade];
-            }
-                break;
-            case JinnPopMenuAnimationZoom:
-            {
-                [self showAnimatedZoom];
-            }
-                break;
-            default:
-                break;
+            [self showAnimatedNone];
         }
+            break;
+        case JinnPopMenuAnimationFade:
+        {
+            [self showAnimatedFade];
+        }
+            break;
+        case JinnPopMenuAnimationZoom:
+        {
+            [self showAnimatedZoom];
+        }
+            break;
+        default:
+            break;
     }
 }
 
-- (void)dismissAnimated:(BOOL)animated
+- (void)dismiss
 {
-    if (animated)
+    switch (self.dismissAnimation)
     {
-        switch (self.dismissAnimation)
+        case JinnPopMenuAnimationNone:
         {
-            case JinnPopMenuAnimationFade:
-            {
-                [self dismissAnimatedFade];
-            }
-                break;
-            case JinnPopMenuAnimationZoom:
-            {
-                [self dismissAnimatedZoom];
-            }
-                break;
-            default:
-                break;
+            [self dismissAnimatedNone];
         }
-    }
-    else
-    {
-        [self removeFromSuperview];
+            break;
+        case JinnPopMenuAnimationFade:
+        {
+            [self dismissAnimatedFade];
+        }
+            break;
+        case JinnPopMenuAnimationZoom:
+        {
+            [self dismissAnimatedZoom];
+        }
+            break;
+        default:
+            break;
     }
 }
 
 - (void)selectItemAtIndex:(NSInteger)index
 {
-    self.selectedIndex = index;
+    _selectedIndex = index;
     
     for (int i = 0; i < self.itemsCount; i++)
     {
@@ -272,19 +347,37 @@
 
 #pragma mark Private
 
-- (void)initData
-{
-    self.itemsCount = self.popMenus.count;
-    self.itemsLinesCount = self.itemsCount % self.maxItemNumEachLine == 0 ? (self.itemsCount / self.maxItemNumEachLine) : (self.itemsCount / self.maxItemNumEachLine + 1);
-}
-
 - (void)createBackgroundView
 {
-    [self.backgroundView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(backgroundViewTapped)]];
-    [self addSubview:self.backgroundView];
-    [self.backgroundView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.bottom.left.right.equalTo(self);
-    }];
+    switch (self.backgroundStyle)
+    {
+        case JinnPopMenuStyleSolidColor:
+        {
+            [self.backgroundView setBackgroundColor:[UIColor darkGrayColor]];
+            [self.backgroundView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(backgroundViewTapped)]];
+            [self.backgroundView setClipsToBounds:YES];
+            [self addSubview:self.backgroundView];
+            [self.backgroundView mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.edges.equalTo(self);
+            }];
+        }
+            break;
+        case JinnPopMenuStyleBlur:
+        {
+            UIBlurEffect *blur = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
+            UIVisualEffectView *effectview = [[UIVisualEffectView alloc] initWithEffect:blur];
+            [effectview addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(backgroundViewTapped)]];
+            [effectview setClipsToBounds:YES];
+            [self addSubview:effectview];
+            [self setBackgroundView:effectview];
+            [effectview mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.edges.equalTo(self);
+            }];
+        }
+            break;
+        default:
+            break;
+    }
 }
 
 - (void)createBezelView
@@ -292,13 +385,39 @@
     CGFloat bezelViewWidth = 2 * self.margin.x + self.itemSize.width * self.maxItemNumEachLine + self.itemSpaceHorizontal * (self.maxItemNumEachLine - 1);
     CGFloat bezelViewHeight = 2 * self.margin.y + self.itemSize.height * self.itemsLinesCount + self.itemSpaceVertical * (self.itemsLinesCount - 1);
     
-    [self.bezelView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(backgroundViewTapped)]];
-    [self addSubview:self.bezelView];
-    [self.bezelView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerY.equalTo(self).offset(self.offset);
-        make.centerX.equalTo(self);
-        make.size.mas_equalTo(CGSizeMake(bezelViewWidth, bezelViewHeight));
-    }];
+    switch (self.bezelStyle)
+    {
+        case JinnPopMenuStyleSolidColor:
+        {
+            [self.bezelView setBackgroundColor:[UIColor clearColor]];
+            [self.bezelView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(backgroundViewTapped)]];
+            [self.bezelView setClipsToBounds:YES];
+            [self addSubview:self.bezelView];
+            [self.bezelView mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.centerY.equalTo(self).offset(self.offset);
+                make.centerX.equalTo(self);
+                make.size.mas_equalTo(CGSizeMake(bezelViewWidth, bezelViewHeight));
+            }];
+        }
+            break;
+        case JinnPopMenuStyleBlur:
+        {
+            UIBlurEffect *blur = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
+            UIVisualEffectView *effectview = [[UIVisualEffectView alloc] initWithEffect:blur];
+            [effectview addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(backgroundViewTapped)]];
+            [effectview setClipsToBounds:YES];
+            [self addSubview:effectview];
+            [self setBezelView:effectview];
+            [effectview mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.centerY.equalTo(self).offset(self.offset);
+                make.centerX.equalTo(self);
+                make.size.mas_equalTo(CGSizeMake(bezelViewWidth, bezelViewHeight));
+            }];
+        }
+            break;
+        default:
+            break;
+    }
 }
 
 - (void)createItems
@@ -311,7 +430,6 @@
         JinnPopMenuItem *popMenu = self.popMenus[i];
         [popMenu setTag:i];
         [popMenu addTarget:self action:@selector(popMenuClicked:) forControlEvents:UIControlEventTouchUpInside];
-        
         [self addSubview:popMenu];
         
         if (self.itemsLinesCount == 1)
@@ -335,24 +453,24 @@
 
 - (void)backgroundViewTapped
 {
-    if ([self.delegate respondsToSelector:@selector(backgroundViewDidTapped:)])
+    if ([self.delegate respondsToSelector:@selector(popMenuBackgroundViewDidTap:)])
     {
-        [self.delegate backgroundViewDidTapped:self];
+        [self.delegate popMenuBackgroundViewDidTap:self];
     }
     
     if (self.shouldHideWhenBackgroundTapped)
     {
-        [self dismissAnimated:NO];
+        [self dismiss];
     }
 }
 
 - (void)popMenuClicked:(UIButton *)sender
 {
-    self.selectedIndex = sender.tag;
+    _selectedIndex = sender.tag;
     
-    if ([self.delegate respondsToSelector:@selector(itemSelectedAtIndex:popMenu:)])
+    if ([self.delegate respondsToSelector:@selector(popMenu:didSelectAtIndex:)])
     {
-        [self.delegate itemSelectedAtIndex:self.selectedIndex popMenu:self];
+        [self.delegate popMenu:self didSelectAtIndex:_selectedIndex];
     }
     
     if (self.mode == JinnPopMenuModeSegmentedControl)
@@ -374,11 +492,21 @@
     
     if (self.shouldHideWhenItemSelected)
     {
-        [self dismissAnimated:NO];
+        [self dismiss];
     }
 }
 
 #pragma mark Animation
+
+- (void)showAnimatedNone
+{
+    // 没有动画
+}
+
+- (void)dismissAnimatedNone
+{
+    [self removeFromSuperview];
+}
 
 - (void)showAnimatedZoom
 {
@@ -388,11 +516,16 @@
         CGAffineTransform transform = CGAffineTransformMakeScale(0.1, 0.1);
         [popMenu setTransform:transform];
         [popMenu setAlpha:0];
+        
         transform = CGAffineTransformMakeScale(1, 1);
-        [UIView animateWithDuration:ANIMATION_DURATION delay:0 usingSpringWithDamping:0.6 initialSpringVelocity:12 options:UIViewAnimationOptionLayoutSubviews animations:^{
-            [popMenu setTransform:transform];
-            [popMenu setAlpha:1];
-        } completion:nil];
+        [UIView animateWithDuration:self.showAnimationDuration
+                              delay:0
+             usingSpringWithDamping:0.6
+              initialSpringVelocity:12
+                            options:UIViewAnimationOptionLayoutSubviews animations:^{
+                                [popMenu setTransform:transform];
+                                [popMenu setAlpha:1];
+                            } completion:nil];
     }
 }
 
@@ -403,14 +536,16 @@
         JinnPopMenuItem *popMenu = self.popMenus[i];
         CGAffineTransform transform = CGAffineTransformMakeScale(1, 1);
         [popMenu setTransform:transform];
-        [popMenu setAlpha:0];
+        [popMenu setAlpha:1];
+        
         transform = CGAffineTransformMakeScale(0.1, 0.1);
-        [UIView animateWithDuration:ANIMATION_DURATION animations:^{
-            [popMenu setTransform:transform];
-            [popMenu setAlpha:1];
-        } completion:^(BOOL finished) {
-            [self removeFromSuperview];
-        }];
+        [UIView animateWithDuration:self.dismissAnimationDuration
+                         animations:^{
+                             [popMenu setTransform:transform];
+                             [popMenu setAlpha:0];
+                         } completion:^(BOOL finished) {
+                             [self removeFromSuperview];
+                         }];
     }
 }
 
@@ -420,9 +555,11 @@
     {
         JinnPopMenuItem *popMenu = self.popMenus[i];
         [popMenu setAlpha:0];
-        [UIView animateWithDuration:ANIMATION_DURATION animations:^{
-            [popMenu setAlpha:1];
-        } completion:nil];
+        
+        [UIView animateWithDuration:self.showAnimationDuration
+                         animations:^{
+                             [popMenu setAlpha:1];
+                         } completion:nil];
     }
 }
 
@@ -432,11 +569,13 @@
     {
         JinnPopMenuItem *popMenu = self.popMenus[i];
         [popMenu setAlpha:1];
-        [UIView animateWithDuration:ANIMATION_DURATION animations:^{
-            [popMenu setAlpha:0];
-        } completion:^(BOOL finished) {
-            [self removeFromSuperview];
-        }];
+        
+        [UIView animateWithDuration:self.dismissAnimationDuration
+                         animations:^{
+                             [popMenu setAlpha:0];
+                         } completion:^(BOOL finished) {
+                             [self removeFromSuperview];
+                         }];
     }
 }
 

@@ -7,157 +7,169 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		11B2879962D606EA38C8C1A8 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C144168F0DC10F852A877E68 /* libPods.a */; };
-		FA78C2331CD1A0A100F46ECE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA78C2321CD1A0A100F46ECE /* main.m */; };
-		FA78C2361CD1A0A100F46ECE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FA78C2351CD1A0A100F46ECE /* AppDelegate.m */; };
-		FA78C2391CD1A0A100F46ECE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA78C2381CD1A0A100F46ECE /* ViewController.m */; };
-		FA78C23C1CD1A0A100F46ECE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA78C23A1CD1A0A100F46ECE /* Main.storyboard */; };
-		FA78C23E1CD1A0A100F46ECE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA78C23D1CD1A0A100F46ECE /* Assets.xcassets */; };
-		FA78C2411CD1A0A100F46ECE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA78C23F1CD1A0A100F46ECE /* LaunchScreen.storyboard */; };
-		FA78C24D1CD1A20200F46ECE /* JinnPopMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = FA78C24C1CD1A20200F46ECE /* JinnPopMenu.m */; };
-		FA78C2561CD1A76E00F46ECE /* delete@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA78C24F1CD1A76E00F46ECE /* delete@2x.png */; };
-		FA78C2571CD1A76E00F46ECE /* download@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA78C2501CD1A76E00F46ECE /* download@2x.png */; };
-		FA78C2581CD1A76E00F46ECE /* edit@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA78C2511CD1A76E00F46ECE /* edit@2x.png */; };
-		FA78C2591CD1A76E00F46ECE /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FA78C2521CD1A76E00F46ECE /* icon.png */; };
-		FA78C25A1CD1A76E00F46ECE /* message@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA78C2531CD1A76E00F46ECE /* message@2x.png */; };
-		FA78C25B1CD1A76E00F46ECE /* search@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA78C2541CD1A76E00F46ECE /* search@2x.png */; };
-		FA78C25C1CD1A76E00F46ECE /* share@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FA78C2551CD1A76E00F46ECE /* share@2x.png */; };
+		94B887B5E6E6C99E5A37C8C0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F2D6192DB1E955FDF44B24 /* libPods.a */; };
+		FAA700641D6BD66E00484D6A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA700631D6BD66E00484D6A /* main.m */; };
+		FAA700671D6BD66E00484D6A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA700661D6BD66E00484D6A /* AppDelegate.m */; };
+		FAA7006A1D6BD66E00484D6A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA700691D6BD66E00484D6A /* ViewController.m */; };
+		FAA7006F1D6BD66E00484D6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAA7006E1D6BD66E00484D6A /* Assets.xcassets */; };
+		FAA7007C1D6BD74000484D6A /* JinnPopMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA7007B1D6BD74000484D6A /* JinnPopMenu.m */; };
+		FAA7009A1D6BE21800484D6A /* delete@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAA7008D1D6BE21800484D6A /* delete@2x.png */; };
+		FAA7009B1D6BE21800484D6A /* delete_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAA7008E1D6BE21800484D6A /* delete_selected@2x.png */; };
+		FAA7009C1D6BE21800484D6A /* download@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAA7008F1D6BE21800484D6A /* download@2x.png */; };
+		FAA7009D1D6BE21800484D6A /* download_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAA700901D6BE21800484D6A /* download_selected@2x.png */; };
+		FAA7009E1D6BE21800484D6A /* edit@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAA700911D6BE21800484D6A /* edit@2x.png */; };
+		FAA7009F1D6BE21800484D6A /* edit_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAA700921D6BE21800484D6A /* edit_selected@2x.png */; };
+		FAA700A01D6BE21800484D6A /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = FAA700931D6BE21800484D6A /* icon.png */; };
+		FAA700A11D6BE21800484D6A /* message@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAA700941D6BE21800484D6A /* message@2x.png */; };
+		FAA700A21D6BE21800484D6A /* message_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAA700951D6BE21800484D6A /* message_selected@2x.png */; };
+		FAA700A31D6BE21800484D6A /* search@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAA700961D6BE21800484D6A /* search@2x.png */; };
+		FAA700A41D6BE21800484D6A /* search_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAA700971D6BE21800484D6A /* search_selected@2x.png */; };
+		FAA700A51D6BE21800484D6A /* share@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAA700981D6BE21800484D6A /* share@2x.png */; };
+		FAA700A61D6BE21800484D6A /* share_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAA700991D6BE21800484D6A /* share_selected@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7C9D5FF209727B1A267E2248 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		C144168F0DC10F852A877E68 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		C80E8ECC2DF65E6AFEE63230 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		FA78C22E1CD1A0A100F46ECE /* JinnPopMenuExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JinnPopMenuExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		FA78C2321CD1A0A100F46ECE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		FA78C2341CD1A0A100F46ECE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		FA78C2351CD1A0A100F46ECE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		FA78C2371CD1A0A100F46ECE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		FA78C2381CD1A0A100F46ECE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		FA78C23B1CD1A0A100F46ECE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		FA78C23D1CD1A0A100F46ECE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FA78C2401CD1A0A100F46ECE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		FA78C2421CD1A0A100F46ECE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FA78C24B1CD1A20200F46ECE /* JinnPopMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JinnPopMenu.h; sourceTree = "<group>"; };
-		FA78C24C1CD1A20200F46ECE /* JinnPopMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JinnPopMenu.m; sourceTree = "<group>"; };
-		FA78C24F1CD1A76E00F46ECE /* delete@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "delete@2x.png"; sourceTree = "<group>"; };
-		FA78C2501CD1A76E00F46ECE /* download@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "download@2x.png"; sourceTree = "<group>"; };
-		FA78C2511CD1A76E00F46ECE /* edit@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "edit@2x.png"; sourceTree = "<group>"; };
-		FA78C2521CD1A76E00F46ECE /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
-		FA78C2531CD1A76E00F46ECE /* message@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "message@2x.png"; sourceTree = "<group>"; };
-		FA78C2541CD1A76E00F46ECE /* search@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search@2x.png"; sourceTree = "<group>"; };
-		FA78C2551CD1A76E00F46ECE /* share@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "share@2x.png"; sourceTree = "<group>"; };
+		09BB644C5ED856DCC2DD8D75 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		5553FB14EC709D93BF3402B4 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		A5F2D6192DB1E955FDF44B24 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAA7005F1D6BD66E00484D6A /* JinnPopMenuExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JinnPopMenuExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAA700631D6BD66E00484D6A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FAA700651D6BD66E00484D6A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FAA700661D6BD66E00484D6A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FAA700681D6BD66E00484D6A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		FAA700691D6BD66E00484D6A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FAA7006E1D6BD66E00484D6A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FAA700731D6BD66E00484D6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAA7007A1D6BD74000484D6A /* JinnPopMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JinnPopMenu.h; sourceTree = "<group>"; };
+		FAA7007B1D6BD74000484D6A /* JinnPopMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JinnPopMenu.m; sourceTree = "<group>"; };
+		FAA7008D1D6BE21800484D6A /* delete@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "delete@2x.png"; sourceTree = "<group>"; };
+		FAA7008E1D6BE21800484D6A /* delete_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "delete_selected@2x.png"; sourceTree = "<group>"; };
+		FAA7008F1D6BE21800484D6A /* download@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "download@2x.png"; sourceTree = "<group>"; };
+		FAA700901D6BE21800484D6A /* download_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "download_selected@2x.png"; sourceTree = "<group>"; };
+		FAA700911D6BE21800484D6A /* edit@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "edit@2x.png"; sourceTree = "<group>"; };
+		FAA700921D6BE21800484D6A /* edit_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "edit_selected@2x.png"; sourceTree = "<group>"; };
+		FAA700931D6BE21800484D6A /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		FAA700941D6BE21800484D6A /* message@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "message@2x.png"; sourceTree = "<group>"; };
+		FAA700951D6BE21800484D6A /* message_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "message_selected@2x.png"; sourceTree = "<group>"; };
+		FAA700961D6BE21800484D6A /* search@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search@2x.png"; sourceTree = "<group>"; };
+		FAA700971D6BE21800484D6A /* search_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "search_selected@2x.png"; sourceTree = "<group>"; };
+		FAA700981D6BE21800484D6A /* share@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "share@2x.png"; sourceTree = "<group>"; };
+		FAA700991D6BE21800484D6A /* share_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "share_selected@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		FA78C22B1CD1A0A100F46ECE /* Frameworks */ = {
+		FAA7005C1D6BD66E00484D6A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11B2879962D606EA38C8C1A8 /* libPods.a in Frameworks */,
+				94B887B5E6E6C99E5A37C8C0 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4AEB16C3869DD2C7E1713A87 /* Frameworks */ = {
+		6C91528789F9C4B0551AE256 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				C144168F0DC10F852A877E68 /* libPods.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		C8602FF804936C419352518E /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				7C9D5FF209727B1A267E2248 /* Pods.debug.xcconfig */,
-				C80E8ECC2DF65E6AFEE63230 /* Pods.release.xcconfig */,
+				5553FB14EC709D93BF3402B4 /* Pods.debug.xcconfig */,
+				09BB644C5ED856DCC2DD8D75 /* Pods.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		FA78C2251CD1A0A100F46ECE = {
+		A2A2C3DDA936CF3F88143352 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FA78C24A1CD1A20200F46ECE /* JinnPopMenu */,
-				FA78C2301CD1A0A100F46ECE /* JinnPopMenuExample */,
-				FA78C22F1CD1A0A100F46ECE /* Products */,
-				C8602FF804936C419352518E /* Pods */,
-				4AEB16C3869DD2C7E1713A87 /* Frameworks */,
+				A5F2D6192DB1E955FDF44B24 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FAA700561D6BD66E00484D6A = {
+			isa = PBXGroup;
+			children = (
+				FAA700791D6BD74000484D6A /* JinnPopMenu */,
+				FAA700611D6BD66E00484D6A /* JinnPopMenuExample */,
+				FAA700601D6BD66E00484D6A /* Products */,
+				6C91528789F9C4B0551AE256 /* Pods */,
+				A2A2C3DDA936CF3F88143352 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		FA78C22F1CD1A0A100F46ECE /* Products */ = {
+		FAA700601D6BD66E00484D6A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FA78C22E1CD1A0A100F46ECE /* JinnPopMenuExample.app */,
+				FAA7005F1D6BD66E00484D6A /* JinnPopMenuExample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FA78C2301CD1A0A100F46ECE /* JinnPopMenuExample */ = {
+		FAA700611D6BD66E00484D6A /* JinnPopMenuExample */ = {
 			isa = PBXGroup;
 			children = (
-				FA78C2341CD1A0A100F46ECE /* AppDelegate.h */,
-				FA78C2351CD1A0A100F46ECE /* AppDelegate.m */,
-				FA78C2371CD1A0A100F46ECE /* ViewController.h */,
-				FA78C2381CD1A0A100F46ECE /* ViewController.m */,
-				FA78C2311CD1A0A100F46ECE /* Supporting Files */,
+				FAA7008C1D6BE21800484D6A /* Resource */,
+				FAA700651D6BD66E00484D6A /* AppDelegate.h */,
+				FAA700661D6BD66E00484D6A /* AppDelegate.m */,
+				FAA700681D6BD66E00484D6A /* ViewController.h */,
+				FAA700691D6BD66E00484D6A /* ViewController.m */,
+				FAA700621D6BD66E00484D6A /* Supporting Files */,
 			);
 			path = JinnPopMenuExample;
 			sourceTree = "<group>";
 		};
-		FA78C2311CD1A0A100F46ECE /* Supporting Files */ = {
+		FAA700621D6BD66E00484D6A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				FA78C24E1CD1A76E00F46ECE /* icons */,
-				FA78C23A1CD1A0A100F46ECE /* Main.storyboard */,
-				FA78C23D1CD1A0A100F46ECE /* Assets.xcassets */,
-				FA78C23F1CD1A0A100F46ECE /* LaunchScreen.storyboard */,
-				FA78C2421CD1A0A100F46ECE /* Info.plist */,
-				FA78C2321CD1A0A100F46ECE /* main.m */,
+				FAA7006E1D6BD66E00484D6A /* Assets.xcassets */,
+				FAA700731D6BD66E00484D6A /* Info.plist */,
+				FAA700631D6BD66E00484D6A /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		FA78C24A1CD1A20200F46ECE /* JinnPopMenu */ = {
+		FAA700791D6BD74000484D6A /* JinnPopMenu */ = {
 			isa = PBXGroup;
 			children = (
-				FA78C24B1CD1A20200F46ECE /* JinnPopMenu.h */,
-				FA78C24C1CD1A20200F46ECE /* JinnPopMenu.m */,
+				FAA7007A1D6BD74000484D6A /* JinnPopMenu.h */,
+				FAA7007B1D6BD74000484D6A /* JinnPopMenu.m */,
 			);
 			path = JinnPopMenu;
 			sourceTree = "<group>";
 		};
-		FA78C24E1CD1A76E00F46ECE /* icons */ = {
+		FAA7008C1D6BE21800484D6A /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				FA78C24F1CD1A76E00F46ECE /* delete@2x.png */,
-				FA78C2501CD1A76E00F46ECE /* download@2x.png */,
-				FA78C2511CD1A76E00F46ECE /* edit@2x.png */,
-				FA78C2521CD1A76E00F46ECE /* icon.png */,
-				FA78C2531CD1A76E00F46ECE /* message@2x.png */,
-				FA78C2541CD1A76E00F46ECE /* search@2x.png */,
-				FA78C2551CD1A76E00F46ECE /* share@2x.png */,
+				FAA700931D6BE21800484D6A /* icon.png */,
+				FAA7008D1D6BE21800484D6A /* delete@2x.png */,
+				FAA7008E1D6BE21800484D6A /* delete_selected@2x.png */,
+				FAA7008F1D6BE21800484D6A /* download@2x.png */,
+				FAA700901D6BE21800484D6A /* download_selected@2x.png */,
+				FAA700911D6BE21800484D6A /* edit@2x.png */,
+				FAA700921D6BE21800484D6A /* edit_selected@2x.png */,
+				FAA700941D6BE21800484D6A /* message@2x.png */,
+				FAA700951D6BE21800484D6A /* message_selected@2x.png */,
+				FAA700961D6BE21800484D6A /* search@2x.png */,
+				FAA700971D6BE21800484D6A /* search_selected@2x.png */,
+				FAA700981D6BE21800484D6A /* share@2x.png */,
+				FAA700991D6BE21800484D6A /* share_selected@2x.png */,
 			);
-			path = icons;
+			path = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FA78C22D1CD1A0A100F46ECE /* JinnPopMenuExample */ = {
+		FAA7005E1D6BD66E00484D6A /* JinnPopMenuExample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FA78C2451CD1A0A100F46ECE /* Build configuration list for PBXNativeTarget "JinnPopMenuExample" */;
+			buildConfigurationList = FAA700761D6BD66E00484D6A /* Build configuration list for PBXNativeTarget "JinnPopMenuExample" */;
 			buildPhases = (
-				67AA3131B9F936E868AC845B /* Check Pods Manifest.lock */,
-				FA78C22A1CD1A0A100F46ECE /* Sources */,
-				FA78C22B1CD1A0A100F46ECE /* Frameworks */,
-				FA78C22C1CD1A0A100F46ECE /* Resources */,
-				E4DAC0C337E162E1E7A045D0 /* Embed Pods Frameworks */,
-				FDB98F47B798DF2CD9F4E853 /* Copy Pods Resources */,
+				E32DB5A9407BDF9557F60EE5 /* Check Pods Manifest.lock */,
+				FAA7005B1D6BD66E00484D6A /* Sources */,
+				FAA7005C1D6BD66E00484D6A /* Frameworks */,
+				FAA7005D1D6BD66E00484D6A /* Resources */,
+				F161AFE4F99FE87C29E3E1B4 /* Embed Pods Frameworks */,
+				FE58BDC0FF11A54C3074DFC1 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -165,24 +177,24 @@
 			);
 			name = JinnPopMenuExample;
 			productName = JinnPopMenuExample;
-			productReference = FA78C22E1CD1A0A100F46ECE /* JinnPopMenuExample.app */;
+			productReference = FAA7005F1D6BD66E00484D6A /* JinnPopMenuExample.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		FA78C2261CD1A0A100F46ECE /* Project object */ = {
+		FAA700571D6BD66E00484D6A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Jinn Chang";
 				TargetAttributes = {
-					FA78C22D1CD1A0A100F46ECE = {
+					FAA7005E1D6BD66E00484D6A = {
 						CreatedOnToolsVersion = 7.3;
 					};
 				};
 			};
-			buildConfigurationList = FA78C2291CD1A0A100F46ECE /* Build configuration list for PBXProject "JinnPopMenuExample" */;
+			buildConfigurationList = FAA7005A1D6BD66E00484D6A /* Build configuration list for PBXProject "JinnPopMenuExample" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -190,38 +202,42 @@
 				en,
 				Base,
 			);
-			mainGroup = FA78C2251CD1A0A100F46ECE;
-			productRefGroup = FA78C22F1CD1A0A100F46ECE /* Products */;
+			mainGroup = FAA700561D6BD66E00484D6A;
+			productRefGroup = FAA700601D6BD66E00484D6A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FA78C22D1CD1A0A100F46ECE /* JinnPopMenuExample */,
+				FAA7005E1D6BD66E00484D6A /* JinnPopMenuExample */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		FA78C22C1CD1A0A100F46ECE /* Resources */ = {
+		FAA7005D1D6BD66E00484D6A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA78C25C1CD1A76E00F46ECE /* share@2x.png in Resources */,
-				FA78C25B1CD1A76E00F46ECE /* search@2x.png in Resources */,
-				FA78C25A1CD1A76E00F46ECE /* message@2x.png in Resources */,
-				FA78C2581CD1A76E00F46ECE /* edit@2x.png in Resources */,
-				FA78C2591CD1A76E00F46ECE /* icon.png in Resources */,
-				FA78C2571CD1A76E00F46ECE /* download@2x.png in Resources */,
-				FA78C2411CD1A0A100F46ECE /* LaunchScreen.storyboard in Resources */,
-				FA78C2561CD1A76E00F46ECE /* delete@2x.png in Resources */,
-				FA78C23E1CD1A0A100F46ECE /* Assets.xcassets in Resources */,
-				FA78C23C1CD1A0A100F46ECE /* Main.storyboard in Resources */,
+				FAA7009F1D6BE21800484D6A /* edit_selected@2x.png in Resources */,
+				FAA700A31D6BE21800484D6A /* search@2x.png in Resources */,
+				FAA700A21D6BE21800484D6A /* message_selected@2x.png in Resources */,
+				FAA700A11D6BE21800484D6A /* message@2x.png in Resources */,
+				FAA7009E1D6BE21800484D6A /* edit@2x.png in Resources */,
+				FAA700A41D6BE21800484D6A /* search_selected@2x.png in Resources */,
+				FAA7009C1D6BE21800484D6A /* download@2x.png in Resources */,
+				FAA7009B1D6BE21800484D6A /* delete_selected@2x.png in Resources */,
+				FAA700A01D6BE21800484D6A /* icon.png in Resources */,
+				FAA7006F1D6BD66E00484D6A /* Assets.xcassets in Resources */,
+				FAA700A51D6BE21800484D6A /* share@2x.png in Resources */,
+				FAA700A61D6BE21800484D6A /* share_selected@2x.png in Resources */,
+				FAA7009A1D6BE21800484D6A /* delete@2x.png in Resources */,
+				FAA7009D1D6BE21800484D6A /* download_selected@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		67AA3131B9F936E868AC845B /* Check Pods Manifest.lock */ = {
+		E32DB5A9407BDF9557F60EE5 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -236,7 +252,7 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		E4DAC0C337E162E1E7A045D0 /* Embed Pods Frameworks */ = {
+		F161AFE4F99FE87C29E3E1B4 /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -251,7 +267,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FDB98F47B798DF2CD9F4E853 /* Copy Pods Resources */ = {
+		FE58BDC0FF11A54C3074DFC1 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -269,40 +285,21 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		FA78C22A1CD1A0A100F46ECE /* Sources */ = {
+		FAA7005B1D6BD66E00484D6A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA78C2391CD1A0A100F46ECE /* ViewController.m in Sources */,
-				FA78C2361CD1A0A100F46ECE /* AppDelegate.m in Sources */,
-				FA78C2331CD1A0A100F46ECE /* main.m in Sources */,
-				FA78C24D1CD1A20200F46ECE /* JinnPopMenu.m in Sources */,
+				FAA7006A1D6BD66E00484D6A /* ViewController.m in Sources */,
+				FAA700671D6BD66E00484D6A /* AppDelegate.m in Sources */,
+				FAA700641D6BD66E00484D6A /* main.m in Sources */,
+				FAA7007C1D6BD74000484D6A /* JinnPopMenu.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		FA78C23A1CD1A0A100F46ECE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FA78C23B1CD1A0A100F46ECE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		FA78C23F1CD1A0A100F46ECE /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FA78C2401CD1A0A100F46ECE /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
-		FA78C2431CD1A0A100F46ECE /* Debug */ = {
+		FAA700741D6BD66E00484D6A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -347,7 +344,7 @@
 			};
 			name = Debug;
 		};
-		FA78C2441CD1A0A100F46ECE /* Release */ = {
+		FAA700751D6BD66E00484D6A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -386,56 +383,60 @@
 			};
 			name = Release;
 		};
-		FA78C2461CD1A0A100F46ECE /* Debug */ = {
+		FAA700771D6BD66E00484D6A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7C9D5FF209727B1A267E2248 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 5553FB14EC709D93BF3402B4 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = JinnPopMenuExample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.jinnchang.JinnPopMenuExample;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jinnchang.ios-demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
-		FA78C2471CD1A0A100F46ECE /* Release */ = {
+		FAA700781D6BD66E00484D6A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C80E8ECC2DF65E6AFEE63230 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 09BB644C5ED856DCC2DD8D75 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = JinnPopMenuExample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.jinnchang.JinnPopMenuExample;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jinnchang.ios-demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FA78C2291CD1A0A100F46ECE /* Build configuration list for PBXProject "JinnPopMenuExample" */ = {
+		FAA7005A1D6BD66E00484D6A /* Build configuration list for PBXProject "JinnPopMenuExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FA78C2431CD1A0A100F46ECE /* Debug */,
-				FA78C2441CD1A0A100F46ECE /* Release */,
+				FAA700741D6BD66E00484D6A /* Debug */,
+				FAA700751D6BD66E00484D6A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FA78C2451CD1A0A100F46ECE /* Build configuration list for PBXNativeTarget "JinnPopMenuExample" */ = {
+		FAA700761D6BD66E00484D6A /* Build configuration list for PBXNativeTarget "JinnPopMenuExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FA78C2461CD1A0A100F46ECE /* Debug */,
-				FA78C2471CD1A0A100F46ECE /* Release */,
+				FAA700771D6BD66E00484D6A /* Debug */,
+				FAA700781D6BD66E00484D6A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = FA78C2261CD1A0A100F46ECE /* Project object */;
+	rootObject = FAA700571D6BD66E00484D6A /* Project object */;
 }
